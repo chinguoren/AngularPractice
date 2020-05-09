@@ -12,6 +12,7 @@ export class GameControlComponent implements OnInit {
   numList:number[];
 
   @Output() number= new EventEmitter<number>();
+  buttonDisabled:boolean=false;
 
 
   setInt:any;
@@ -28,7 +29,7 @@ export class GameControlComponent implements OnInit {
 
 
   startPressed(){
-
+    this.buttonDisabled=true;
     this.setInt= setInterval(()=>{
       this.randNumber=(Math.round(Math.random() * 1000));
       this.number.emit(this.randNumber);
@@ -42,6 +43,7 @@ export class GameControlComponent implements OnInit {
 
 
   stopPressed(){
+    this.buttonDisabled=false;
     clearInterval(this.setInt);
 
     

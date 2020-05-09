@@ -26,11 +26,42 @@
 
 </div> 
 
-<even [EvenArray]=evenlist *ngFor="let x of evenlist; let i=index">{{ x }}</even>
+<div class="container">
+  
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    <div style="width:100%;height:100px;
+background:#eb6383;
+text-align:center;
+padding: 20px;
+font-size:30px;
+border-color: black;border:5px;border-style:solid;">Odd</div>
+  <br>
 
-<br>
+    <odd [OddArray]=oddlist *ngFor="let y of oddlist;">{{ y }}</odd>
+    <br>
+  </div>
+  
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    <div style="width:100%;height:100px;
+      background:#ffe9c5;
+      text-align:center;
+      padding: 20px; 
+      font-size:30px;
+      border-color: black;border:5px;border-style:solid;">Even</div>
+  <br>
 
-<odd [OddArray]=oddlist *ngFor="let y of oddlist;">{{ y }}</odd>
+    <even [EvenArray]=evenlist *ngFor="let x of evenlist; let i=index">{{ x }}</even>
+    <br>
+  </div>
+  
+  
+</div>
+
+
+
+
+
+
 
 
 
